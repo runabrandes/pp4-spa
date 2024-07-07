@@ -1,4 +1,36 @@
 from django.db import models
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
+
+import datetime
+
+BOOKING_TIMESLOTS = (
+    (datetime.time(10, 0, 0), "10:00"),
+    (datetime.time(11, 0, 0), "11:00"),
+    (datetime.time(12, 0, 0), "12:00"),
+    (datetime.time(13, 0, 0), "13:00"),
+    (datetime.time(14, 0, 0), "14:00"),
+    (datetime.time(15, 0, 0), "15:00"),
+    (datetime.time(16, 0, 0), "16:00"),
+    (datetime.time(17, 0, 0), "17:00"),
+    (datetime.time(18, 0, 0), "18:00"),
+)
+
+class Services(models.Model):
+    """
+    Offered services 
+
+    -`service` is a CharField that holds the name of the service provided
+    -`description` is a TextField which holds a description of the different services offered
+    -`price` is a DecimalField that holds the price of the corresponding service
+
+    """
+
+    service = models.CharField(max_length=150)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=3, decimal_places=2)
+
+    def __str__(self):
+        return self.service
