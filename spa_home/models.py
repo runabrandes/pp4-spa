@@ -18,7 +18,7 @@ BOOKING_TIMESLOTS = (
     (datetime.time(18, 0, 0), "18:00"),
 )
 
-class Services(models.Model):
+class Service(models.Model):
     """
     Offered services 
 
@@ -30,7 +30,7 @@ class Services(models.Model):
 
     service = models.CharField(max_length=150)
     description = models.TextField()
-    price = models.DecimalField(max_digits=3, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
         return self.service
