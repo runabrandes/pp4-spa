@@ -34,3 +34,23 @@ class Service(models.Model):
 
     def __str__(self):
         return self.service
+
+
+class Booking(models.Model):
+    """
+    Model for making bookings.
+    """
+
+    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_name")
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name="booking_service")
+    date_booking_made = models.DateField(auto_now_add=True)
+    booking_date = models.DateField()
+    booking_time = models.TimeField(choices=BOOKING_TIMESLOTS)
+    booking_confirmed = models.BooleanField(default=False)
+    booking_comments = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ['booking_date', 'booking_time']
+
+    def __str__(self):
+        return (f"{self.name} booked {self.service} on {self.booking_date} at {self.booking_time}")
