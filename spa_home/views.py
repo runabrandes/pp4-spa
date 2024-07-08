@@ -1,6 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from django.views import generic
+from .models import Service
 
 # Create your views here.
-def home(request):
-    return HttpResponse('This will be the home page!')
+
+class ServiceList(generic.ListView):
+    model = Service
