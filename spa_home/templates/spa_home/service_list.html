@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of offered services</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<div>
     <h1>Services</h1>
+</div>
+<div>
     {% for service in object_list %}
-    <h3>{{service.service}}</h3>
+    <h4>{{service.service}}</h4>
     <p>{{service.description}}</p>
     <p>{{service.price}}</p>
     {% endfor %}
-</body>
-</html>
+</div>
+
+{% endblock content %}
