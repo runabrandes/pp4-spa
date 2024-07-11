@@ -2,7 +2,46 @@
 {% load static %}
 
 {% block content %}
+
 <!-- index.html content -->
+ <section class="salon_introduction">
+    <div>
+        <p>Welcome to Mountain Mist Spa, where the serenity of the mountains meets the art of relaxation. Our tranquil retreat
+        invites you to escape the hustle and bustle of daily life and indulge in a world of pampering and rejuvenation.
+        Our skilled therapists and expertly crafted treatments will transport you to a
+        state of deep relaxation, melting away stress and tension as you surrender to the soothing sounds of nature. From
+        gentle massages to tailored facial treatments, our range of treatments is designed to nourish both body and soul,
+        leaving you feeling refreshed, renewed, and ready to take on the world once again.</p>
 
+        <p>At Mountain Mist Spa, we're committed to providing only the finest products to enhance your spa experience. We've
+        curated a selection of premium skincare and bodycare lines that are carefully crafted with the highest-quality
+        ingredients and advanced technology. Our product partners include renowned brands such as La Mer, Sunday Riley, and
+        Dr. Hauschka, known for their potent formulations and gentle, non-irritating formulas. These exceptional products
+        are designed to nourish and revitalize the skin, leaving you with a radiant glow and a sense of well-being that
+        extends far beyond your spa treatment. Whether you're looking to address specific skin concerns or simply pamper
+        yourself with a luxurious treat, our expertly chosen products are the perfect complement to our range of spa
+        treatments, allowing you to take home the serenity and tranquility of the mountains and enjoy it in the comfort of
+        your own space.</p>
 
-{% endblock content %}
+        <p>Please note that for further information on our products, we kindly ask that you enquire during your spa visit. Our
+        knowledgeable therapists and spa staff would be delighted to provide you with detailed information on our product
+        range, answering any questions you may have and making personalized recommendations tailored to your specific skin
+        type and concerns. This will ensure that you get the most out of your spa experience and can enjoy the benefits of
+        our premium products!</p>
+</div>
+
+</section>
+
+<section class="service_list">
+    <div>
+        <h2>Services</h2>
+
+        {% for service in object_list %}
+        <h4>{{service.service}}</h4>
+        <p>{{service.description}}</p>
+        <p>£{{service.price}}</p>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

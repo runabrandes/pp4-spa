@@ -4,37 +4,46 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website for the Mountain Mist Spa, describes different services that the spa offers, gives prices as well as contact details for the salon.">
+    <meta name="description"
+        content="Website for the Mountain Mist Spa, describes different services that the spa offers, gives prices as well as contact details for the salon.">
     <title>Mountain Mist Spa</title>
 
     <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
+
 <body>
-<!--Header-->
+    <!--Header and Navbar-->
     <h1>Mountain Mist Spa</h1>
 
-<!--Main-->
-<main>
-{% block content %}
-{% endblock content %}
-</main>
+    <main>
 
-<!--Footer-->
+        {% block content %}
+        <!-- Content from linked HTML files will appear here -->
+        {% endblock content %}
+
+    </main>
+
+    <!--Footer-->
 
 
-<!--Bootstrap JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!--Font Awesome-->
-<script src="https://kit.fontawesome.com/7c10daa828.js" crossorigin="anonymous"></script>
-<!-- Custom JS -->
-<script src="{% static 'js/script.js' %}"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/7c10daa828.js" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
