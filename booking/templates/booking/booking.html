@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2>Book Your Appointment</h2>
+            <p>To book a spa appointment at Mountain Mist Spa, simply fill in the form below with the following
+                information:
+                <ul>
+                    <li>The type of treatment you're interested in</li>
+                    <li>Your preferred date and time for your appointment</li>
+                    <li>Any specific requests or concerns you may have</li>
+                </ul>
+                We'll get back to you promptly to confirm your appointment and answer any questions you may have.</p>
+
+            <!-- Create New Booking -->
+            <div class="col-md-4 card">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+
+                    <p>Booking as: {{ user.username }}</p>
+                    <form id="bookingForm" method="post">
+                        {{ booking_form | crispy }}
+                        {% csrf_token %}
+                        <button class="btn btn-secondary" type="submit">Submit</button>
+                    </form>
+                    {% else %}
+                    <p>Sign in to make a booking!</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endblock content %}

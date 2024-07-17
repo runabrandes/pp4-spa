@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from spa_home.models import Service
+from cloudinary.models import CloudinaryField
 import datetime
 
 # Create your models here.
