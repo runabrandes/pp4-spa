@@ -67,21 +67,21 @@
     <div class="row">
         <h2>Services</h2>
     </div>
-    <!-- Button trigger modal -->
-    <div class="row justify-content-center">
+    <!-- Button to trigger modal -->
+    <div class="row">
         {% for service in object_list %}
-        <div class="col-md-5 m-3 p-3">
-            <button type="button" class="modal-btn" data-bs-toggle="modal"
-                data-bs-target="#serviceModal">{{ service.service }}
+        <div class="col-md-5 m-3 p-3 justify-content-center">
+            <button type="button" class="modal-btn justify-content-center" data-bs-toggle="modal"
+                data-bs-target="#serviceModal{{forloop.counter}}">{{ service.service }}
             </button>
         </div>
 
         <!--Code for modal-->
-        <div class="modal fade justify-content-center" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel{{service.service}}"
+        <div class="modal fade justify-content-center" id="serviceModal{{forloop.counter}}" tabindex="-1" aria-labelledby="serviceModalLabel{{service.service}}"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header justify-content-between">
                         <h3 class="modal-title" id="serviceModalLabel{{service.service}}">{{service.service}}</h3>
                         <button type="button" class="close btn modal-btn fs-3" data-bs-dismiss="modal" aria-label="Close">
                             &times;
