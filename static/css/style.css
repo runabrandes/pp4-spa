@@ -73,3 +73,19 @@ label {
 .modal-booking-btn:hover {
     background-color: #effdee;
 }
+
+/*Map and Contact Container*/
+.map-container {
+    max-width: 90%;
+}
+
+#map {
+    height: 50%;
+    width: 50%;
+}
+
+#map iframe {
+    height: 100%;
+    width: 100%;
+}
+
