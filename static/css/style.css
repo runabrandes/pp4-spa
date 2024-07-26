@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Licorice&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 body {
-background-color: #eaf8ea;
+background-color: #e8eefa;
 min-height: 100vh;
 }
 
@@ -66,7 +66,7 @@ ul {
     height: 50px;
     width: 200px;
     transition-duration: 0.4s;
-    background-color: #effdee;
+    background-color: #e8eefa;
     color: black;
     border: 2px solid #eba4a4;
     border-radius: 4px;
@@ -74,11 +74,28 @@ ul {
 
 .modal-btn:hover {
     background-color: #eba4a4;
-    color: gray;
+    color: black;
 }
 
 .modal-booking-btn:hover {
-    background-color: #effdee;
+    background-color: #e8eefa;
+}
+
+
+/*Other Buttons*/
+button {
+    height: 50px;
+    width: 100px;
+    transition-duration: 0.4s;
+    background-color: #e8eefa;
+    color: black;
+    border: 2px solid #eba4a4;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+button:hover {
+    background-color: #eba4a4;
+    color: black;
 }
 
 /*Map and Contact Container*/
