@@ -7,10 +7,12 @@ min-height: 100vh;
 
 h1, h2 {
     font-family: 'Belleza', sans-serif;
+    font-weight: bold;
 }
 
 h2 {
     text-decoration: underline;
+    padding: 10px;
 }
 
 p {
@@ -21,6 +23,11 @@ font-family: 'Merriweather', sans-serif;
 
 label {
     font-family: 'Merriweather', sans-serif;
+}
+
+ul {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 250; 
 }
 
 /*Navbar*/
