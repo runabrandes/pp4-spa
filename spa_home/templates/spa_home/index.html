@@ -4,86 +4,93 @@
 {% block content %}
 
 <!-- index.html content -->
+<div class="container index-header">
+    <div class="row index-heading">
+        <p class="index-heading">Mountain Mist</p>
+        <p class="index-heading">Spa</p>
+    </div>
+</div>
+<br>
+<div class="hero-image">
+    <img src="static/images/misty_mountain.jpg" class="img-fluid" alt="Responsive image of misty mountain and trees">
+</div>
+
 <div class="container">
     <section class="salon_introduction">
         <div class="row">
-            <div>
-                <p>Welcome to Mountain Mist Spa, where the serenity of the mountains meets the art of relaxation. Our
-                    tranquil retreat
-                    invites you to escape the hustle and bustle of daily life and indulge in a world of pampering and
-                    rejuvenation.
-                    Our skilled therapists and expertly crafted treatments will transport you to a
-                    state of deep relaxation, melting away stress and tension as you surrender to the soothing sounds of
-                    nature. From
-                    gentle massages to tailored facial treatments, our range of treatments is designed to nourish both
-                    body
-                    and soul,
-                    leaving you feeling refreshed, renewed, and ready to take on the world once again.</p>
-            </div>
-            <div class="row">
-                <p>At Mountain Mist Spa, we're committed to providing only the finest products to enhance your spa
-                    experience. We've
-                    curated a selection of premium skincare and bodycare lines that are carefully crafted with the
-                    highest-quality
-                    ingredients and advanced technology. Our product partners include renowned brands such as La Mer,
-                    Sunday
-                    Riley, and
-                    Dr. Hauschka, known for their potent formulations and gentle, non-irritating formulas. These
-                    exceptional
-                    products
-                    are designed to nourish and revitalize the skin, leaving you with a radiant glow and a sense of
-                    well-being that
-                    extends far beyond your spa treatment. Whether you're looking to address specific skin concerns or
-                    simply pamper
-                    yourself with a luxurious treat, our expertly chosen products are the perfect complement to our
-                    range of
-                    spa
-                    treatments, allowing you to take home the serenity and tranquility of the mountains and enjoy it in
-                    the
-                    comfort of
-                    your own space.</p>
-            </div>
-            <div class="row">
-                <p>Please note that for further information on our products, we kindly ask that you enquire during your
-                    spa
-                    visit. Our
-                    knowledgeable therapists and spa staff would be delighted to provide you with detailed information
-                    on
-                    our product
-                    range, answering any questions you may have and making personalized recommendations tailored to your
-                    specific skin
-                    type and concerns. This will ensure that you get the most out of your spa experience and can enjoy
-                    the
-                    benefits of
-                    our premium products!</p>
-            </div>
+            <p>Welcome to Mountain Mist Spa, where the serenity of the mountains meets the art of relaxation. Our
+                tranquil retreat invites you to escape the hustle and bustle of daily life and indulge in a world of
+                pampering and rejuvenation. Our skilled therapists and expertly crafted treatments will transport you to
+                a state of deep relaxation, melting away stress and tension as you surrender to the soothing sounds of
+                nature. From gentle massages to tailored facial treatments, our range of treatments is designed to
+                nourish both body and soul, leaving you feeling refreshed, renewed, and ready to take on the world once
+                again.</p>
         </div>
-    </section>
+        <div class="row">
+            <p>At Mountain Mist Spa, we're committed to providing only the finest products to enhance your spa
+                experience. We've
+                curated a selection of premium skincare and bodycare lines that are carefully crafted with the
+                highest-quality
+                ingredients and advanced technology. Our product partners include renowned brands such as La Mer,
+                Sunday
+                Riley, and
+                Dr. Hauschka, known for their potent formulations and gentle, non-irritating formulas. These
+                exceptional
+                products
+                are designed to nourish and revitalize the skin, leaving you with a radiant glow and a sense of
+                well-being that
+                extends far beyond your spa treatment. Whether you're looking to address specific skin concerns or
+                simply pamper
+                yourself with a luxurious treat, our expertly chosen products are the perfect complement to our
+                range of
+                spa
+                treatments, allowing you to take home the serenity and tranquility of the mountains and enjoy it in
+                the
+                comfort of
+                your own space.</p>
+        </div>
+        <div class="row">
+            <p>Please note that for further information on our products, we kindly ask that you enquire during your
+                spa
+                visit. Our
+                knowledgeable therapists and spa staff would be delighted to provide you with detailed information
+                on
+                our product
+                range, answering any questions you may have and making personalized recommendations tailored to your
+                specific skin
+                type and concerns. This will ensure that you get the most out of your spa experience and can enjoy
+                the
+                benefits of
+                our premium products!</p>
+        </div>
+</div>
+</section>
 </div>
 
 <br>
 
-<div class="container">
+<div class="container modal-container">
     <div class="row">
         <h2>Services</h2>
     </div>
     <!-- Button to trigger modal -->
     <div class="row">
         {% for service in object_list %}
-        <div class="col-md-5 m-3 p-3 justify-content-center">
+        <div class="col-md-5 m-3 p-3 d-flex justify-content-center">
             <button type="button" class="modal-btn justify-content-center" data-bs-toggle="modal"
                 data-bs-target="#serviceModal{{forloop.counter}}">{{ service.service }}
             </button>
         </div>
 
         <!--Code for modal-->
-        <div class="modal fade justify-content-center" id="serviceModal{{forloop.counter}}" tabindex="-1" aria-labelledby="serviceModalLabel{{service.service}}"
-            aria-hidden="true">
+        <div class="modal fade justify-content-center" id="serviceModal{{forloop.counter}}" tabindex="-1"
+            aria-labelledby="serviceModalLabel{{service.service}}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header justify-content-between">
                         <h3 class="modal-title" id="serviceModalLabel{{service.service}}">{{service.service}}</h3>
-                        <button type="button" class="close btn modal-btn fs-3" data-bs-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close btn modal-close-btn fs-3" data-bs-dismiss="modal"
+                            aria-label="Close">
                             &times;
                         </button>
                     </div>
@@ -92,7 +99,7 @@
                         <p>£{{service.price}}</p>
                     </div>
                     <div class="modal-footer justify-content-end">
-                        <a href="{% url 'booking' %}" type="button" class="btn modal-btn fs-2">Book An Appointment</a>
+                        <a href="{% url 'booking' %}" type="button" class="btn modal-booking-btn fs-2">Book An Appointment</a>
                     </div>
                 </div>
             </div>
@@ -101,5 +108,25 @@
         {% endfor %}
     </div>
 </div>
+
+<section class="container">
+    <div class="row d-flex justify-content-center">
+        <div id="map" class="col-md-6">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89678.84781196486!2d-121.87821719528576!3d45.379810250006095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54be1e08fce94dab%3A0x3d8e9a89b30dd7c6!2sRamona%20Falls!5e0!3m2!1sen!2suk!4v1721851426858!5m2!1sen!2suk"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div id="address" class="col-md-6">
+            <p>Please find us at:</p>
+            <p>Ramona Falls Trail, Mount Hood</p>
+            <p>OREGON 97041, United States</p>
+            <p>Phone: 357-130-213</p>
+        </div>
+    </div>
+</section>
+
+
 
 {% endblock %}
