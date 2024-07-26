@@ -89,3 +89,25 @@ label {
     width: 100%;
 }
 
+
+/*Footer*/
+
+.footer {
+    margin-top: auto;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+    background-color: lightgrey;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#socials i {
+    font-size: 300%;
+}
