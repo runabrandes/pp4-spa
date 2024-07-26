@@ -54,3 +54,22 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
+.modal-btn {
+    height: 50px;
+    width: 200px;
+    transition-duration: 0.4s;
+    background-color: #effdee;
+    color: black;
+    border: 2px solid #eba4a4;
+    border-radius: 4px;
+}
+
+.modal-btn:hover {
+    background-color: #eba4a4;
+    color: gray;
+}
+
+.modal-booking-btn:hover {
+    background-color: #effdee;
+}
