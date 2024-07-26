@@ -14,23 +14,23 @@
                     <li>Your preferred date and time for your appointment</li>
                     <li>Any specific requests or concerns you may have</li>
                 </ul>
-                We'll get back to you promptly to confirm your appointment and answer any questions you may have.</p>
+                <p>We'll get back to you promptly to confirm your appointment and answer any questions you may have.</p>
 
-            <!-- Create New Booking -->
-            <div class="col-md-4 card">
-                <div class="card-body">
-                    {% if user.is_authenticated %}
+                <!-- Create New Booking -->
+                <div class="col-md-12 card">
+                    <div class="card-body">
+                        {% if user.is_authenticated %}
 
-                    <p>Booking as: {{ user.username }}</p>
-                    <form id="bookingForm" method="post">
-                        {{ booking_form | crispy }}
-                        {% csrf_token %}
-                        <button class="btn btn-secondary" type="submit">Submit</button>
-                    </form>
-                    {% else %}
-                    <p>Sign in to make a booking!</p>
-                    {% endif %}
+                        <p>Booking as: {{ user.username }}</p>
+                        <form id="bookingForm" method="post">
+                            {{ booking_form | crispy }}
+                            {% csrf_token %}
+                            <button class="btn btn-secondary btn-lg" type="submit">Submit</button>
+                        </form>
+                        {% else %}
+                        <p>Sign in to make a booking!</p>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
         </div>
         {% endblock content %}
