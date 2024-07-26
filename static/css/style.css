@@ -29,3 +29,28 @@ label {
     font-family: 'Belleza', sans-serif;
     font-size: x-large;
 }
+
+/*Index Header*/
+.index-header {
+    background: #eba4a4;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.index-header p {
+    font-family: 'Licorice', sans-serif;
+    font-size: xx-large;
+}
+
+.index-heading {
+    text-align: center;
+    padding: 2px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
