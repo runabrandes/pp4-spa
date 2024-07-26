@@ -1,5 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Licorice&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 body {
-background-color: #effdee;
+background-color: #eaf8ea;
+min-height: 100vh;
 }
 
-.modal-btn
+h1, h2 {
+    font-family: 'Belleza', sans-serif;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+p {
+text-align: justify;
+padding: 10px;
+font-family: 'Merriweather', sans-serif;
+}
+
+label {
+    font-family: 'Merriweather', sans-serif;
+}
+
+/*Navbar*/
+
+.navbar-brand {
+    font-family: 'Belleza', sans-serif;
+    font-size: x-large;
+}
