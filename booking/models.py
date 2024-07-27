@@ -18,11 +18,12 @@ BOOKING_TIMESLOTS = (
     (datetime.time(18, 0, 0), "18:00"),
 )
 
+
 class Booking(models.Model):
     """
     Model for making bookings.
     """
-
+    
     name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_name")
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name="booking_service")
     date_booking_made = models.DateField(auto_now_add=True)
