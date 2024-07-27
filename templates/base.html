@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'booking' as booking_url %}
 {% url 'booking_overview' as booking_overview_url %}
+{% url 'past_bookings' as past_bookings_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -53,7 +54,12 @@
                     <li class="nav-item">
                         <a class="nav-link
                       {% if request.path == booking_overview_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'booking_overview' %}">Booking Overview</a>
+                            href="{% url 'booking_overview' %}">Upcoming Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link
+                      {% if request.path == past_bookings_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'past_bookings' %}">Past Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
