@@ -50,6 +50,7 @@ class BookingListView(LoginRequiredMixin, ListView):
         return context
 
 
+
 def cancel_booking(request, booking_id):
         """
         Function to cancel bookings made.
@@ -66,3 +67,23 @@ def cancel_booking(request, booking_id):
         return HttpResponseRedirect(reverse('booking_overview'))
 
     
+class PastBookingListView(LoginRequiredMixin, ListView):
+    """
+    View to output and filter bookings.
+    Only shows bookings in the future.
+    """
+    model = Booking
+    context_object_name = 'bookings'
+    template_name = 'booking/past_bookings.html'
+
+    #Show bookings in bookings_overview and filter only upcoming bookings
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.request.user
+        today = datetime.now()
+        context['bookings'] = []
+
+        booking_upcoming = user.booking_name.all()
+        context['bookings'] = booking_upcoming.filter(booking_date__lte=today.date())
+
+        return context
