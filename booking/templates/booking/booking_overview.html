@@ -33,12 +33,47 @@
                         <i class="fa-regular fa-circle-xmark text-danger"></i>
                         {% endif %}
                     </td>
-                    <td scope="row"><button class="table-btn"><i class="fa-regular fa-pen-to-square"></i></button></td>
-                    <td scope="row"><button class="table-btn"><i class="fa-solid fa-trash-can"></i></button></td>
+                    <td scope="row"><button type="button" class="table-btn"><i
+                                class="fa-regular fa-pen-to-square"></i></button></td>
+                    <td scope="row"><button type="button" class="table-btn btn btn-danger btn-delete"
+                            data-bs-toggle="modal" data-bs-target="#confirmCancellation{{booking.id}}"
+                            aria-label="Cancellation confirm button"><i
+                                class="fa-solid fa-trash-can text-dark"></i></button></td>
                 </tbody>
             </table>
             {% endfor %}
+
         </div>
 
+        <!-- Cancellation confirmation modal -->
+
+        {% for booking in bookings %}
+
+        <div class="modal fade" id="confirmCancellation{{booking.id}}" tabindex="-1"
+            aria-labelledby="confirmCancellationLabel{{booking.id}}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="confirmCancellation{{booking.id}}">Cancel Booking?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Are you sure you want to cancel your booking?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal"
+                            aria-label="Abort cancellation button">
+                            No
+                        </button>
+
+                        <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger btn-delete"
+                            aria-label="Cancellation confirmation button">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
 
         {% endblock content %}
