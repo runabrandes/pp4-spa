@@ -113,6 +113,11 @@ button:hover {
     width: 100%;
 }
 
+/*Bookings Overview Table*/
+td {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
 /*Footer*/
 

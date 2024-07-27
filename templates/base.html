@@ -33,8 +33,9 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><i class="fa-solid fa-mountain"></i> Mountain Mist Spa <i
                     class="fa-solid fa-mountain"></i></a>
-            <button class="navbar-toggler bg-light navbar-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-light navbar-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-body"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -84,15 +85,15 @@
     </div>
 
 
-    <main class="justify-content-end">
+    <main class="justify-content-center">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">Welcome, {{ user }}!</p>
+        <p class="text-end ">Welcome, {{ user }}!</p>
         {% else %}
-        <p class="text-end m-3">You are not signed in!</p>
+        <p class="text-end ">You are not signed in!</p>
 
-        {% endif %}
+            {% endif %}
 
-        {% block content %}
+            {% block content %}
         <!-- Content from linked HTML files will appear here -->
         {% endblock content %}
 
