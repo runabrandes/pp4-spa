@@ -33,7 +33,15 @@ The features I wanted the website to have:
 
 ### User Stories
 
-
+- As a user, I want to be able to book appointments online so that I can easily schedule my visits at my convenience.  
+- As a user, I want to edit or cancel my appointments online so that I can manage my bookings without needing to call the salon.  
+- As a user, I want to view the available services offered by the salon so that I can choose the right treatments for my needs.
+- As a user, I want detailed descriptions and pricing for services so that I can make informed decisions before booking.   
+- As a user, I want a user-friendly website interface so that I can navigate the website easily and quickly find what I'm looking for.  
+- As a user, I want to access the salon's contact information so that I can reach if needed.
+- As a user, I want to create a customer account to manage my bookings. 
+- As a user, I want to have an overview of my upcoming appointments to ensure I don’t forget them.
+- As a user, I want to have an overview of my past appointments so that I can review my service history and recall my favorite treatments.
 
 ## Overview
 
