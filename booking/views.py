@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import ListView
 from .models import Booking
 from spa_home.models import Service
-from .forms import BookingForm, doubleBookings
+from .forms import BookingForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from datetime import date, time, datetime
 
