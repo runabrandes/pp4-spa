@@ -18,6 +18,11 @@ def booking_request(request):
             booking.name = request.user
             booking_form.save()
             messages.add_message(request, messages.SUCCESS, "Many thanks for booking an appointment. We look forward to seeing you at Mountain Mist Spa!")
+        else:
+            for field, errors in booking_form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{error}")
+
 
     booking_form = BookingForm()
 

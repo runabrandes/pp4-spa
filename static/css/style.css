@@ -3,6 +3,12 @@
 body {
 background-color: #e8eefa;
 min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+main {
+    min-height: 85vh;
 }
 
 h1, h2 {
@@ -61,6 +67,8 @@ ul {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
+/* Modals */
 
 .modal-btn {
     height: 50px;
