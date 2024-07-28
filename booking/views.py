@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import ListView
 from .models import Booking
 from spa_home.models import Service
-from .forms import BookingForm
+from .forms import BookingForm, doubleBookings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from datetime import date, time, datetime
 
@@ -65,6 +65,29 @@ def cancel_booking(request, booking_id):
             messages.add_message(request, messages.ERROR, 'Cancellation unsuccessful. Please call Mountain Mist Spa for assistance.')
 
         return HttpResponseRedirect(reverse('booking_overview'))
+
+
+def edit_booking(request, booking_id):
+    """
+    Function to edit existing bookings 
+    """
+    queryset = Booking.objects.filter(name=request.user)
+    booking_to_edit = get_object_or_404(queryset, id=booking_id)
+
+    if request.method == 'POST':
+        booking_form = BookingForm(request.POST, instance=booking_to_edit)
+        if booking_form.is_valid():
+            booking_to_edit.booking_confirmed = False
+            booking_form.save()
+            messages.success(request, 'Appointment updated successfully.')
+            return HttpResponseRedirect(reverse('booking_overview'))
+        else:
+            messages.error(request, 'Update unsuccessful. Please call Mountain Mist Spa for assistance.')
+
+    booking_form = BookingForm(instance=booking_to_edit)
+
+    return render(request, 'booking/booking_update.html', {'booking_form': booking_form})
+
 
     
 class PastBookingListView(LoginRequiredMixin, ListView):
