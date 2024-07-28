@@ -10,9 +10,30 @@
 
 #
 
-## User Experience
+## PROJECT IDEA
+
+My goal for this project was to create a website for a salon/spa that enables customers to easily book, edit, and cancel appointments online. The website also showcases the services offered by the business, as well as contact information for customers seeking to reach out or find the salon with ease.
+
+The features I wanted the website to have:
+
+1. Online appointment booking system  
+2. Appointment editing and cancellation functionality  
+3. Display of available services offered  
+4. User-friendly interface for easy navigation  
+5. Accessible contact information for the business  
+6. Customer accounts for managing bookings  
+7. Service descriptions and pricing information  
+8. Display of upcoming bookings
+9. Display of past bookings
+10. Contact information 
+
+#
+
+## UX / UI
 
 ### User Stories
+
+
 
 ## Overview
 
