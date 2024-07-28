@@ -33,7 +33,8 @@
                         <i class="fa-regular fa-circle-xmark text-danger"></i>
                         {% endif %}
                     </td>
-                    <td scope="row"><button type="button" class="table-btn"><i
+                    <td scope="row"><button type="button" class="table-btn btn btn-edit" data-bs-toggle="modal"
+                            data-bs-target="#confirmEdit{{booking.id}}" aria-label="Edit confirm button"><i
                                 class="fa-regular fa-pen-to-square"></i></button></td>
                     <td scope="row"><button type="button" class="table-btn btn btn-danger btn-delete"
                             data-bs-toggle="modal" data-bs-target="#confirmCancellation{{booking.id}}"
@@ -69,6 +70,37 @@
 
                         <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger btn-delete"
                             aria-label="Cancellation confirmation button">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+        <!-- Edit confirmation modal -->
+
+        {% for booking in bookings %}
+
+        <div class="modal fade" id="confirmEdit{{booking.id}}" tabindex="-1"
+            aria-labelledby="confirmEditLabel{{booking.id}}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="confirmEdit{{booking.id}}">Edit Booking?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Are you sure you want to update your booking?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal"
+                            aria-label="Abort edit button">
+                            No
+                        </button>
+
+                        <a href="{% url 'edit_booking' booking.id %}" class="btn btn-danger btn-delete"
+                            aria-label="Edit confirmation button">Yes</a>
                     </div>
                 </div>
             </div>
