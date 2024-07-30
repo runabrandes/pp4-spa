@@ -3,13 +3,17 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
+
 class Service(models.Model):
     """
-    Offered services 
+    Offered services
 
-    -`service` is a CharField that holds the name of the service provided
-    -`description` is a TextField which holds a description of the different services offered
-    -`price` is a DecimalField that holds the price of the corresponding service
+    -`service` is a CharField that holds
+     the name of the service provided
+    -`description` is a TextField which
+    holds a description of the different service offered
+    -`price` is a DecimalField that holds
+     the price of the corresponding service
 
     """
 
