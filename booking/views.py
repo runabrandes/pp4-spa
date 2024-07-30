@@ -84,7 +84,7 @@ def cancel_booking(request, booking_id):
             'Cancellation unsuccessful.'
             + 'Please call Mountain Mist Spa for assistance.')
 
-        return HttpResponseRedirect(reverse('booking_overview'))
+    return HttpResponseRedirect(reverse('booking_overview'))
 
 
 def edit_booking(request, booking_id):
