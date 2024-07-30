@@ -6,6 +6,9 @@ from datetime import date, datetime
 
 
 class BookingForm(forms.ModelForm):
+    """
+    Generates the booking form for users
+    """
     class Meta:
         model = Booking
         fields = (
@@ -23,7 +26,7 @@ class BookingForm(forms.ModelForm):
             'booking_comments': 'Comments',
         }
 
-# Method for cleaning and validating of form fields.
+# Method for validating of form fields.
     def clean(self):
         cleaned_data = super().clean()
         booking_date = cleaned_data.get('booking_date')
@@ -32,12 +35,12 @@ class BookingForm(forms.ModelForm):
         if booking_date < date.today():
             raise ValidationError(
                 'Please select a date'
-                + 'that lies ahead in the calendar.')
+                + ' that lies ahead in the calendar.')
 
         if booking_date == date.today() and booking_time < datetime.now().time():
-            raise ValidationError(_(
+            raise ValidationError(
                 'Please select'
-                + 'a time that lies ahead in the calendar.'))
+                + ' a time that lies ahead in the calendar.')
 
         existing_booking = Booking.objects.filter(
             booking_date=booking_date,
@@ -46,6 +49,6 @@ class BookingForm(forms.ModelForm):
         if existing_booking:
             raise ValidationError(
                 'This appointment has already'
-                + 'been booked. Please select a different timeslot.')
+                + ' been booked. Please select a different timeslot.')
 
         return cleaned_data
