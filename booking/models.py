@@ -4,7 +4,7 @@ from spa_home.models import Service
 from cloudinary.models import CloudinaryField
 import datetime
 
-# Create your models here.
+# Time slots that can be selected for booking services.
 
 BOOKING_TIMESLOTS = (
     (datetime.time(10, 0, 0), "10:00"),
@@ -22,6 +22,21 @@ BOOKING_TIMESLOTS = (
 class Booking(models.Model):
     """
     Model for making bookings.
+
+    Attributes:
+        name: User making the booking.
+        service: Service being booked.
+        date_booking_made: The date when the booking was made.
+        booking_date: The date when the service is booked for.
+        booking_time: The time of the booking, selected from BOOKING_TIMESLOTS.
+        booking_confirmed: Indicates whether the booking has been confirmed.
+        booking_comments: Additional comments or notes related to the booking.
+
+    Meta:
+        Orders bookings by booking_date and booking_time.
+
+    Methods:
+        __str__(): Returns a string representation of the booking, including name, service, date, and time.
     """
 
     name = models.ForeignKey(
@@ -43,4 +58,4 @@ class Booking(models.Model):
 
     def __str__(self):
         return (f"{self.name} booked {self.service} on"
-                + "{self.booking_date} at {self.booking_time}")
+                + f" {self.booking_date} at {self.booking_time}")

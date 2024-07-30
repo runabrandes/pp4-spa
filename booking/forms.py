@@ -7,7 +7,7 @@ from datetime import date, datetime
 
 class BookingForm(forms.ModelForm):
     """
-    Generates the booking form for users
+    Generates the booking form for users so they can input needed information.
     """
     class Meta:
         model = Booking

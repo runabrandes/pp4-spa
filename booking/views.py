@@ -8,10 +8,16 @@ from .forms import BookingForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from datetime import date, time, datetime
 
-# Create your views here.
-
 
 def booking_request(request):
+    """
+    This view processes POST requests related to
+    booking appointments. On a POST request, it validates
+    the submitted booking form, saves the booking data,
+    and associates it with the active user.
+    Success and error messages are displayed based on the
+    validation outcome.
+    """
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
@@ -20,8 +26,8 @@ def booking_request(request):
             booking_form.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                + "Many thanks for booking an appointment."
-                + "We look forward to seeing you at Mountain Mist Spa!")
+                "Many thanks for booking an appointment."
+                + " We look forward to seeing you at Mountain Mist Spa!")
         else:
             for field, errors in booking_form.errors.items():
                 for error in errors:
@@ -61,7 +67,9 @@ class BookingListView(LoginRequiredMixin, ListView):
 
 def cancel_booking(request, booking_id):
     """
-    Function to cancel bookings made.
+    This view checks if the booking to be cancelled belongs to the
+    active user. If so, it deletes the booking
+    and displays a success message.
     """
     queryset = Booking.objects.filter(name=request.user)
     booking_to_cancel = get_object_or_404(queryset, id=booking_id)
@@ -81,7 +89,10 @@ def cancel_booking(request, booking_id):
 
 def edit_booking(request, booking_id):
     """
-    Function to edit existing bookings
+    Function to edit existing bookings.
+    Checks if the booking to be edited belongs to the
+    active user. If so, it updates the booking
+    and displays a success message.
     """
     queryset = Booking.objects.filter(name=request.user)
     booking_to_edit = get_object_or_404(queryset, id=booking_id)
@@ -97,7 +108,7 @@ def edit_booking(request, booking_id):
             messages.error(
                 request,
                 "Update unsuccessful."
-                + "Please call Mountain Mist Spa for assistance.")
+                + " Please call Mountain Mist Spa for assistance.")
 
     booking_form = BookingForm(instance=booking_to_edit)
 
@@ -110,13 +121,12 @@ def edit_booking(request, booking_id):
 class PastBookingListView(LoginRequiredMixin, ListView):
     """
     View to output and filter bookings.
-    Only shows bookings in the future.
+    Only shows bookings in the past.
     """
     model = Booking
     context_object_name = 'bookings'
     template_name = 'booking/past_bookings.html'
 
-# Show bookings in bookings_overview and filter only upcoming bookings
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.request.user
@@ -124,6 +134,7 @@ class PastBookingListView(LoginRequiredMixin, ListView):
         context['bookings'] = []
 
         booking_upcoming = user.booking_name.all()
-        context['bookings'] = booking_upcoming.filter(booking_date__lte=today.date())
+        context['bookings'] = booking_upcoming.filter(
+                booking_date__lte=today.date())
 
         return context

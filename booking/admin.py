@@ -3,11 +3,12 @@ from spa_home.models import Service
 from .models import Booking
 
 
-# Register your models here.
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     """
-    Enables viewing of bookings in admin section
+    Enables viewing of bookings in admin section.
+    Provides functionalities for displaying, searching, 
+    and filtering bookings within the Django admin panel.
     """
     list_display = (
       'service',

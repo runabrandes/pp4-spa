@@ -7,6 +7,4 @@ urlpatterns = [
     path('cancel/<int:booking_id>', views.cancel_booking, name='cancel_booking'),
     path('past_bookings', views.PastBookingListView.as_view(), name='past_bookings'),
     path('edit/<int:booking_id>', views.edit_booking, name='edit_booking'),
-
-
 ]
