@@ -14,7 +14,7 @@ class Service(models.Model):
     holds a description of the different service offered
     -`price` is a DecimalField that holds
      the price of the corresponding service
-
+    -__str__(): Returns a string representation of service.
     """
 
     service = models.CharField(max_length=150)
