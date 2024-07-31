@@ -108,3 +108,46 @@ The upcoming bookings overview features visibility of the booking confirmation s
 - ReadMe: Create comprehensive documentation to guide in navigating and using the application as well as explaining the purpose of the website. 
 - Testing: Create comprehensive documentation showcasing the different testing approaches. 
 
+#
+
+### Scope
+
+#### Agile Methodology
+
+This project was developed using the Agile methodology.<br>
+All  user stories implementation progress was recorded using [GitHub](https://github.com/).
+As user stories were accomplished, they were moved in the GitHub Kanban board from **ToDo**, to **In Progress** to **Done**. The board can be viewed [here](https://github.com/users/runabrandes/projects/2).
+
+#### Simple and Intuitive UX
+
+- Create a responsive navigation bar for easy access to all pages.
+- Develop a footer with social media links and copyright.
+- Include the spa location and phone number.
+- Ensure that users receive visual notifications for all changes to their account, particularly regarding booking modifications and cancellations.
+- Maintain user orientation throughout their website experience, enhancing usability.
+
+#### Relevant Content
+
+- Ensure all available spa services and treatments are clearly listed on the site.
+- Display the spa's address prominently so users can easily locate it.
+- Only allow users to book available time slots for treatments.
+
+#### Responsiveness
+
+- Create a responsive website that functions seamlessly across all devices and screen sizes.
+
+#
+
+### Structure
+
+The website is designed with the user in mind, and once users are logged in, they have access to different pages:
+
+- Home Page
+- Make A Booking
+- Upcoming Bookings (including edit and delete functionalities)
+- Past Booking (including edit and delete functionalities)
+
+There are also 2 pages available to users who are not signed in:
+
+- Create Account
+- Login
