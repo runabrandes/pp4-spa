@@ -146,8 +146,36 @@ The website is designed with the user in mind, and once users are logged in, the
 - Make A Booking
 - Upcoming Bookings (including edit and delete functionalities)
 - Past Booking (including edit and delete functionalities)
+- Account Logout
 
 There are also 2 pages available to users who are not signed in:
 
 - Create Account
 - Login
+
+#
+
+### Wireframes
+
+The website layout has been planned through the creation of detailed wireframes that outline the desired structure  of the Mountain Mist Spa website. These wireframes serve as a visual guide, illustrating the placement of key elements such as navigation menus, service listings, booking forms and booking overviews.
+
+- Wireframes for home page
+![wireframes_home](templates/documentation/images/home_wireframes.png)
+
+- Wireframes for making a booking
+![wireframes_make_booking](templates/documentation/images/make_booking_wireframes.png)
+
+- Wireframes for booking overview
+![wireframes_overview](templates/documentation/images/overview_wireframe.png)
+
+- Wireframes for sign in 
+![wireframes_signin](templates/documentation/images/signin_wireframe.png)
+
+- Wireframes for sign out
+![wireframes_signout](templates/documentation/images/signout_wireframe.png)
+
+- Wireframes for sign up
+![wireframes_signup](templates/documentation/images/signup_wireframes.png)
+
+#
+
