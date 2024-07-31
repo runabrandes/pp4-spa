@@ -179,3 +179,95 @@ The website layout has been planned through the creation of detailed wireframes 
 
 #
 
+### Features
+
+#### Navigation
+
+The navbar along the top of the pages is always displayed, allowing the user to easily navigate around the site. The styling is consistent across the different pages but has different links on display depending on if users are logged in or out. 
+
+![navbar](templates/documentation/images/navbar.png)
+
+#### Footer
+
+The footer displays on all pages of the webiste and has been styled consistently.
+It features two social media links (Facebook, Instagram).
+
+![footer](templates/documentation/images/footer.png)
+
+#### Logo and Welcome message
+
+The logo for the website has been designed with a simple, cursive style that gives it a unique look. When users log in, they see a welcoming message, and if they are not logged in, a message stating "You are not logged in!" appears, making it clear whether they have access to personalised features. This straightforward approach helps users understand their status on the site.
+
+![logo](templates/documentation/images/logo%20and%20welcome.png)
+
+#### Hero Image
+
+The hero image chosen for the spa aligns well with its name and showcases a misty mountain forest setting, creating a tranquil and serene atmosphere that reflects the spa's focus on relaxation and natural beauty.
+
+![hero](templates/documentation/images/hero_imagine.png)
+
+#### Introduction
+
+The spa introduction serves as an inviting gateway, emphasizing the salon's dedication to creating a serene environment where guests can unwind. It clearly outlines the spa’s focus. 
+
+![intro](templates/documentation/images/intro.png)
+
+#### Service overview
+
+The service overview feature provides a clear summary of the spa’s offerings. When clicking a service button, a modal is triggered which displays each service, a brief description and the pricing.
+
+![service](templates/documentation/images/services.png)
+
+#### Map and contact information
+
+The map and contact feature includes the spa's address, phone number, and an interactive map which navigates the user to Google Maps when clicked.
+
+![map](templates/documentation/images/map_contact.png)
+
+#### Make A Booking
+
+The booking feature allows customers to easily schedule appointments online. User are required to select a desired service, choose a date and time, and provide necessary details. Form validation prevents appointments in the past to be booked as well as hinders users from booking appointments that have been taken by other users.
+
+![booking_intro](templates/documentation/images/booking.png)
+![booking_form](templates/documentation/images/bookingform.png)
+
+#### Booking overview
+
+In the upcoming bookings section, users can view a list of booked appointments, including service details, date, time and confirmation status, making it easy to keep track of their bookings. Edit and delete buttons are also present. When the user decides to edit a booking, a modal is triggered asking them to confirm the booking is to be updated. If yes, they are taken back to the booking form (now populated with the original booking information) where they can alter the details of the bookings. Once the booking has been altered the confirmation state chnages back to False. <br> 
+If they decide to delete a booking instead, a modal is triggered when clicking the delete button, asking the user if they want to proceed with the deletion. If yes, the upcoming bookings page is refreshed and the deleted booking will no longer show in the list. <br>
+The past bookings section provides a record of previous appointments, featuring service information and dates, enabling users to review their service history and rebook their favorite treatments.
+
+![booking_overview](templates/documentation/images/bookings.png)
+![booking_past](templates/documentation/images/past_bookings.png)
+
+#### Sign Up, Sign In, Sign Out
+
+The application provides sign up, sign in and sign out features as well as 'Forgot Password' and email address change options for enhanced security. <br> Users can create an account to access service bookings, log in with their credentials, and log out to protect their information.
+
+![sign_up](templates/documentation/images/sign_up.png)
+![sign_in](templates/documentation/images/sign_in.png)
+![sign_out](templates/documentation/images/sign_out.png)
+
+#### Colour schemes and fonts
+
+The three colours used across the website are: <br>
+- '#E8EEFA' - Alice Blue
+- 'EBA4A4' - Melon
+- 'F8F9FA' - Sea Salt
+
+![colours](templates/documentation/images/colours.png)
+
+#### Admin panel
+
+The website features a standard Django admin panel. 
+Here, superusers can view information regarding accounts that have been created for the website and add services to the wesbite. This will generate more buttons and modals for the service overview. <br>
+Search and filter functions are present for made bookings and admins can confirm the booking status. 
+
+#### Future Features
+
+- Add profile section where users can add a profile picture and update their username
+- Add chat function so users can get in touch with the salon via the website rather than having to call
+- Add email confirmations for bookings made, as well as updates and deletions of bookings. 
+
+#
+
