@@ -52,3 +52,59 @@ The upcoming bookings overview features visibility of the booking confirmation s
 - Admin users have extra functionality in the admin panel, being able to search bookings by date and username. They can also confirm, edit and cancel bookings.
 
 #
+
+### Strategy
+
+#### Project Setup
+
+- Django Application: Create the initial Django application tailored for Mountain Mist Spa.
+- File Structure: Organise the project files to ensure maintainability.
+- Database Models: Define and establish models to capture relevant data.
+- Static Files: Link custom CSS and images for a polished look and feel.
+- Base Template: Create a base.html file for consistent layout across all templates.
+- Google Fonts: Integrate Google Fonts for enhanced typography.
+
+#### UX Enhancements
+- Favicon: Add a Favicon logo for brand recognition.
+- Service Listings: Display a list of spa services, featuring a brief description and their costs.
+- Styled Auth Pages: Customise the default allauth pages to reflect the spa's branding.
+- Home Page: Create an inviting homepage showcasing the spa's introduction, offerings and contact details. 
+- Map Section: Include a map area so customers can easily access the spa's location. 
+- Booking History: Allow users to view spa treatment bookings.
+- User Notifications: Display alerts and messages to inform users about booking statuses.
+
+#### Navigation
+- Navbar: Ensure a consistent navigation bar across all pages for easy access.
+- Footer: Implement a standard footer on all pages for additional information (copyright) and social media links.
+
+#### CRUD
+- Upcoming Bookings: Enable users to view, modify and delete their upcoming spa treatment bookings.
+- Online Booking: Provide a seamless interface for customers to book spa treatments.
+- Admin Controls: Enhance admin capabilities for managing bookings and services.
+
+#### Authentication
+- User Accounts: Enable users to create and manage their personal accounts.
+- Allauth Setup: Configure Django Allauth for robust user authentication.
+
+#### Validation
+- Booking Validation: Implement form validations to ensure bookings are valid and timeslots aren't double-booked.
+- Ensure logged in user can only book appointments for their active account. 
+
+#### Administration
+- Admin Search: Allow admins to search and filter for bookings.
+- User Account Management: Let users update their account details, including email and password.
+- Booking Confirmation: Equip admins with tools to confirm spa treatment bookings.
+
+#### Deployment
+- Cloudinary for Media: Use Cloudinary for efficient media storage and delivery.
+- PostgreSQL: for Database services. 
+- Heroku Deployment: Deploy the application on Heroku.
+- DEBUG Settings: Ensure the application is deployed with DEBUG set to False.
+
+#### Testing
+- Testing: Conduct thorough testing to ensure a smooth user experience and validate code (HTML and CSS validator, Python Linter, WAVE testing)
+
+#### Documentation
+- ReadMe: Create comprehensive documentation to guide in navigating and using the application as well as explaining the purpose of the website. 
+- Testing: Create comprehensive documentation showcasing the different testing approaches. 
+
