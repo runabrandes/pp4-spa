@@ -1,4 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Licorice&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 body {
-background-color: #effdee;
+background-color: #e8eefa;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
 }
 
+main {
+    min-height: 100vh;
+}
+
+h1, h2 {
+    font-family: 'Belleza', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    text-decoration: underline;
+    padding: 10px;
+}
+
+p {
+padding: 10px;
+font-family: 'Merriweather', sans-serif;
+}
+
+label {
+    font-family: 'Merriweather', sans-serif;
+}
+
+ul {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 250; 
+}
+
+/*Navbar*/
+
+.navbar-brand {
+    font-family: 'Belleza', sans-serif;
+    font-size: x-large;
+}
+
+/*Index Header*/
+.index-header {
+    background: #eba4a4;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.index-header p {
+    font-family: 'Licorice', sans-serif;
+    font-size: xx-large;
+}
+
+.index-heading {
+    text-align: center;
+    padding: 2px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Modals */
+
+.modal-btn {
+    height: 50px;
+    width: 200px;
+    transition-duration: 0.4s;
+    background-color: #e8eefa;
+    color: black;
+    border: 2px solid #eba4a4;
+    border-radius: 4px;
+}
+
+.modal-btn:hover {
+    background-color: #eba4a4;
+    color: black;
+}
+
+.modal-booking-btn:hover {
+    background-color: #e8eefa;
+}
+
+
+/*Other Buttons*/
+button {
+    height: 50px;
+    width: 100px;
+    transition-duration: 0.4s;
+    background-color: #e8eefa;
+    color: black;
+    border: 2px solid #eba4a4;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+button:hover {
+    background-color: #eba4a4;
+    color: black;
+}
+
+/*Map and Contact Container*/
+.map-container {
+    max-width: 90%;
+}
+
+#map {
+    height: 50%;
+    width: 50%;
+}
+
+#map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/*Bookings Overview Table*/
+td {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/*Footer*/
+
+.footer {
+    margin-top: auto;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+    background-color: lightgrey;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#socials i {
+    font-size: 300%;
+}
