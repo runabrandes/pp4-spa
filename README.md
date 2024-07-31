@@ -4,7 +4,7 @@
 
 ## FINAL DESIGN
 
-![Final project image home page](templates/documentation/images/PP4_AIR.png) Am I Responsive(https://amiresponsive.co.uk/)
+![Final project image home page](templates/documentation/images/PP4_AIR.png) [Am I Responsive](https://amiresponsive.co.uk/)
 
 [Here is a link to the final project](https://pp4-spa-4203ec483751.herokuapp.com/)
 
@@ -179,6 +179,11 @@ The website layout has been planned through the creation of detailed wireframes 
 
 #
 
+### Database Schema
+![database_schema](templates/documentation/images/database_schema.png)
+
+#
+
 ### Features
 
 #### Navigation
@@ -270,4 +275,32 @@ Search and filter functions are present for made bookings and admins can confirm
 - Add email confirmations for bookings made, as well as updates and deletions of bookings. 
 
 #
+
+## Testing 
+
+All testing has been documented in [Testing](TESTING.md)
+
+#
+
+## Tools Used
+
+- [GitHub](https://github.com/)
+- [Gitpod Enterprise](https://codeinstitute-ide.net/) for writing the code
+- [Heroku](https://heroku.com/) used for deploying the project
+- [PostgresSQL from Code Institute](https://dbs.ci-dbs.net/)
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) for creating the wireframes - the desktop version was used
+- [LucidChart](https://www.lucidchart.com/) for creating the Database Schema
+- [Font Awesome](https://fontawesome.com/) for the site's icons
+- [Bootstrap](https://getbootstrap.com/) for the initial styling of of the site
+- [Google Fonts](https://fonts.google.com/) for the typography
+- [Code Institute Pylint](https://pep8ci.herokuapp.com/) for validating the python code
+- [HTML - W3C HTML Validator](https://validator.w3.org/) for validating the HTML
+- [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) for validating the CSS
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) for debugging the project
+- [W.A.V.E.](https://wave.webaim.org/) for testing accessibility
+- [Cloudinary](https://cloudinary.com/) for storing static data
+- [Chrome LightHouse extension](https://developer.chrome.com/docs/lighthouse/overview/) for testing performance
+- [Flaticon](https://www.flaticon.com/) for sourcing the sites favicon
+- [Pexels](https://www.pexels.com/) for the hero and booking page images
+
 
