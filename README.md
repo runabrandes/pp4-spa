@@ -43,7 +43,7 @@ The features I wanted the website to have:
 - As a user, I want to have an overview of my upcoming appointments to ensure I don’t forget them.
 - As a user, I want to have an overview of my past appointments so that I can review my service history and recall my favorite treatments.
 
-## Overview
+## OVERVIEW
 
 - The website was created using Django and features full CRUD (Create, Read, Update, Delete) functionality and a user-friendly UI to make booking an appointment at Mountain Mist Spa sraightforward.
 - The user can sign up to the website an when logged in, they can make bookings, as well as edit and delete these.
@@ -276,7 +276,7 @@ Search and filter functions are present for made bookings and admins can confirm
 
 #
 
-## Testing 
+## TESTING 
 
 All testing has been documented in [Testing](TESTING.md)
 
@@ -311,7 +311,7 @@ The error message: ’The view didn’t return a HttpResponse’ was displayed. 
 
 # 
 
-## Tools Used
+## TOOLS USED
 
 - [GitHub](https://github.com/)
 - [Gitpod Enterprise](https://codeinstitute-ide.net/) for writing the code
@@ -362,3 +362,37 @@ After running the command, port 8000 was selected and opened from the PORTS tab.
 
 #
 
+## DEPLOYMENT 
+
+### Heroku Deployment
+
+IMPORTANT: prior to deploying ensure all dependencies are listed within the requirements.txt file
+
+Within the terminal in Gitpod Enterprise type `pip3 --local freeze > requirements.txt` and a list with all requirements will be created to be read by Heroku.
+
+
+1. Navigate to [Heroku.com](https://www.heroku.com/) and login (or create a new account).
+2. On the top right hand side, click the `New` button.
+3. Inside the dropdown menu, select `Create new app`.
+4. Create a new name for your app (making sure the name chosen is available) in this case it is `pp4-spa`. 
+App names can only be in lowercase letters, numbers and dashes.
+5. Select your region, in this case `Europe`.
+6. Click on the `Create App` button.  
+7. This will create your app in Heroku and take you to the dashboard.
+8. Navigate to the settings tab and scroll down to the button `Reveal Config vars`.
+9. Replace the word `KEY` and enter `DATABASE_URL` and then replace the word `VALUE` and enter your personalised URL to the relevant database, then click the `Add` button.
+10. Add a further Config Vars, replace the word `KEY` and enter `CLOUDINARY_URL` and then replace the word `VALUE` and enter your personalised URL to your Cloudinary, then click on the `Add` button.
+11. To add the final Config Vars to this project, replace the word `KEY` and enter `SECRET_KEY` and then replace the word `VALUE` and enter your personalised SECRET KEY, then click on the `Add` button.
+12. Below `Config vars` is `Buildpacks`. Click the `Add Buildpack` button.
+13. In the pop up window, select `python` and save changes.
+14. Next, navigate to the `Deploy` tab at the top left.
+15. Select `Github, 'connect to github'` as the deployment method.
+16. Search for the Github Repository in the search field (in this case `pp4-spa`) and click `Search`.
+17. When the search is complete, click `Connect`.
+18. Once your repository is connected to [Heroku](https://heroku.com/), click the `Enable Automatic Deploys` button for automatic deployment.
+19. Alternatively you can manually deploy by selecting a branch to deploy from and clicking `Deploy Branch`. 
+20. If you choose to `Enable Automatic Deploys`, [Heroku](https://heroku.com/) will build a new version of the app when a change to `gitpod` is pushed to `Github`.  
+21. Manual deployment allows you to update the app whenever you click `Deploy Branch`. For this project, the manual way was chosen and the branch deployed from is `main`. 
+22. Once the build process is complete you will be able to view the live app by clicking on the `Open app` button.
+
+#
