@@ -202,10 +202,87 @@ Actual:
 
 The report can be viewed [here](https://wave.webaim.org/report#/https://pp4-spa-4203ec483751.herokuapp.com).
 
-No errors are present. But 8 alerts were raised which are all informing the report viewer of 'Redundant Links'. <br>
+No errors are present, but 8 alerts were raised which are all informing the report viewer of 'Redundant Links'. <br>
 This is due to the Service modals on the home page and the 'Book An Appointment' link in them, which is automatically generated for each modal created and therefore duplication of the links is unavoidbale. 
 
 For the User Experience I have decided to accept these alerts and did not change the modal layout. 
+
+#
+
+## VALIDATOR TESTING
+
+#### HTML
+
+All self-written html files were tested using [W3C HTML Validator](https://validator.w3.org/).
+
+Errors found were:
+- base.html:
+    - Trailing '/' in favicon tag. This has been removed
+
+- index.html:
+    - removed 'type=button' from `<a>` element in the service modals as this was returning an error.
+
+- booking_overview.html:
+    - added missing `<tr>` tags to table to wrap around the datble data (`<td>`)
+
+- past_bookings.html:
+    - added missing `<tr>` tags to table to wrap around the datble data (`<td>`)
+
+After all the errors had been fixed the HTML passed the validation check. 
+
+![html_validation](templates/documentation/images/index.html_W3C.png)
+
+#
+
+#### CSS
+
+The CSS was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+No errors were found. 
+
+![css_validation](templates/documentation/images/CSS_test.png)
+
+#
+
+#### Python Linter
+
+All self-written Python files were tested for the correct PEP8 using the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+Errors found:
+- Trailing whitespace error
+- Missing new line at end of the file
+- Not enough blank lines between functions
+
+All the above have been corrected. 
+
+
+- The most returned error was E501 - 'line too long error'. <br> I have tried to format the lines that were longer than 80 characters but then received error E139 - 'continuation line unaligned' instead. 
+
+![python_E139error](templates/documentation/images/E139_PyLinter.png)
+
+After researching ways on how to properly format Python code I was able to resolve this issue as well and cleared all Python files of errors. 
+
+![python_no_error](templates/documentation/images/noErrors_PythonLinter.png)
+
+#
+
+## LIGHTHOUSE
+
+Lighthouse reports for all pages returned overall positive feedback. 
+
+Please see below:
+
+- Home Page
+![home_lighthouse](templates/documentation/images/home_lighthouse.png)
+
+- Booking Form
+![booking_lighthouse](templates/documentation/images/booking_lighthouse.png)
+
+- Upcoming Bookings
+![upcoming_lighthouse](templates/documentation/images/upcoming_lighthouse.png)
+
+- Past Bookings
+![past_lighthouse](templates/documentation/images/past_lighthouse.png)
 
 #
 
