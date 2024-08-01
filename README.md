@@ -282,6 +282,35 @@ All testing has been documented in [Testing](TESTING.md)
 
 #
 
+## BUGS
+
+A few bugs I have encountered during working on this project were:
+
+- URL paths not found - return of 404 page.   
+
+This was due to syntax errors in the URL patterns I have written or the files not being linked as they should have been. <br>
+All the bugs surrounding URL paths have been fixed and the links are now fully functional. 
+
+
+- Salon services were not showing on home page as expected.
+
+This was due to a syntax error. The relevant variable name was misspelled which stopped the list I tried to access from being iterated through. <br> This bug has been fixed and the services are now displaying as desired. 
+
+- Function for ValidationErrors not functional
+
+The function to raise ValidationErrors was not functional after it had just been written. This was due to me writing it as 2 separate functions in the beginning and the logic not working.  After I combined the two, the ValidationErrors displayed to the user as expected. 
+
+- Tables for upcoming and past bookings were not centering in the middle of the page as desired.
+
+This was due to a Bootstrap error. Instead of the correct class ‘col-md-12’ I had initially used the class ‘col-md-8’ which stopped the whole width of the page being used. <br>
+This has been corrected. 
+
+- When trying to cancel bookings a 404 error was returned
+
+The error message: ’The view didn’t return a HttpResponse’ was displayed. This was due to an indentation error which I was able to resolve. 
+
+# 
+
 ## Tools Used
 
 - [GitHub](https://github.com/)
@@ -332,3 +361,4 @@ To view a preview of the project (port 8000) following command was used:
 After running the command, port 8000 was selected and opened from the PORTS tab. 
 
 #
+
