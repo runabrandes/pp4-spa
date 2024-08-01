@@ -464,5 +464,5 @@ If you need to make a local clone:
 
 * My husband Jamie for his support and reading through my code! It's good being on this coding journey together!!
 * My mentor Rory for being supportive and giving me great advice when I thought I was unable to solve some issues and showing me that sometimes a solution is a lot simpler than I assumed! Thanks for helping me!
-* All ghe tutors at Code Institute K have spoken to throughout the development of this project! Thank you all for the advice!
-* To members from Slack when I was struggling to find solutions to issues or just had general questions regarding the project. 
+* All the tutors at Code Institute I have spoken to throughout the development of this project! Thank you all for the advice!
+* To members from Slack when I was struggling to find solutions to issues or had general questions regarding the project. 
