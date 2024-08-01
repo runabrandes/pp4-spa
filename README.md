@@ -449,3 +449,11 @@ If you need to make a local clone:
 8. Press Enter, to create your local clone to your chosen directory
 
 #
+
+## CREDITS
+
+- [W3Schools](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- The Code Institute CodeStar walkthrough project
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Django Documentation](https://docs.djangoproject.com/en/5.0/)
