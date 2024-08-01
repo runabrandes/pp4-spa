@@ -303,4 +303,32 @@ All testing has been documented in [Testing](TESTING.md)
 - [Flaticon](https://www.flaticon.com/) for sourcing the sites favicon
 - [Pexels](https://www.pexels.com/) for the hero and booking page images
 
+### Python packages used
 
+- [Django](https://www.djangoproject.com/) was used as the framework for the site.
+- [Allauth](https://docs.allauth.org/en/latest/) for the login authentication.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/) for help styling the forms.
+- [Cloudinary](https://cloudinary.com/) for hosting the images.
+- [Gunicorn](https://gunicorn.org/) for handling the HTTP requests in production.
+- [Whitenoise](http://whitenoise.evans.io/en/stable/) for deploying the static files to Heroku.
+
+A full list of the requirements and the versions used can be found in the requirements.txt file.
+
+To create the requirements.txt file following command was run:<br>
+`pip3 freeze > requirements.txt`
+
+To create a superuser the following command was used: <br>
+`python3 manage.py createsuperuser`
+
+To run the migrations to the database the following commands were used:<br>
+`python3 manage.py makemigrations` <br>
+`python3 manage.py migrate`
+
+To collect the static files for deployment run the following command: <br>
+`python3 manage.py collectstatic`
+
+To view a preview of the project (port 8000) following command was used:
+`python3 manage.py runserver`
+After running the command, port 8000 was selected and opened from the PORTS tab. 
+
+#
