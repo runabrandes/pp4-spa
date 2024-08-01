@@ -396,3 +396,16 @@ App names can only be in lowercase letters, numbers and dashes.
 22. Once the build process is complete you will be able to view the live app by clicking on the `Open app` button.
 
 #
+
+## VERSION CONTROL
+
+These commands were used for version control during development:
+
+- git commit -m "example message" - to commit changes to the local repository
+- git push - to push all committed changes to the GitHub repository
+- git pull - to pull all code into main branch once the feature branch had been merged and deleted
+- git status - to see if the branch currently working on is up to date or if the are any unstaged changes
+- git log --oneline - to see the last commit
+- git commit --amend - to amend the most recent commit message
+
+#
