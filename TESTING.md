@@ -194,3 +194,18 @@ Expected:
 Actual:
 - As expected
 
+#
+
+## ACCESSIBILITY
+
+[Wave Accessibility](https://wave.webaim.org/) tool was used for final testing of the deployed website to check for any accessibility errors.
+
+The report can be viewed [here](https://wave.webaim.org/report#/https://pp4-spa-4203ec483751.herokuapp.com).
+
+No errors are present. But 8 alerts were raised which are all informing the report viewer of 'Redundant Links'. <br>
+This is due to the Service modals on the home page and the 'Book An Appointment' link in them, which is automatically generated for each modal created and therefore duplication of the links is unavoidbale. 
+
+For the User Experience I have decided to accept these alerts and did not change the modal layout. 
+
+#
+
