@@ -286,3 +286,24 @@ Please see below:
 
 #
 
+## RESPONSIVENESS
+
+Responsiveness has been testing across a few different screen sizes.
+
+- Laptop
+- Tablet
+- Mobile phone
+
+The responsiveness of the elements was good and no issues were noted when testing the website on laptops and tablets. 
+
+The only issue identified is that the past and upcoming bookings tables won't shrink enough to fit a mobile screen entirely. 
+
+The table is functional and can be viewed fully but in order to do this the user is required to scroll over to the right, so they can see the edit and delete buttons(upcoming bookings table only). This is something I plan to investigate further and resolve as an improvement in the future.
+
+#
+
+## BROWSER COMPATIBILITY
+
+The following browsers were used to test the site:
+- Google Chrome
+- Safari
