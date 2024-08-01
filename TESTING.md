@@ -288,7 +288,7 @@ Please see below:
 
 ## RESPONSIVENESS
 
-Responsiveness has been testing across a few different screen sizes.
+Responsiveness has been tested across a few different screen sizes.
 
 - Laptop
 - Tablet

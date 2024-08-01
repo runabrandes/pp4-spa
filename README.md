@@ -257,8 +257,8 @@ The application provides sign up, sign in and sign out features as well as 'Forg
 
 The three colours used across the website are: <br>
 - '#E8EEFA' - Alice Blue
-- 'EBA4A4' - Melon
-- 'F8F9FA' - Sea Salt
+- '#EBA4A4' - Melon
+- '#F8F9FA' - Sea Salt
 
 ![colours](templates/documentation/images/colours.png)
 
@@ -462,7 +462,7 @@ If you need to make a local clone:
 
 ## ACKNOWLEDGEMENTS
 
-* My husband Jamie for his support and reading through my code! It's good being on this coding journey together!!
+* My husband Jamie for his support and reading through my code when needed! It's good being on this coding journey together!!
 * My mentor Rory for being supportive and giving me great advice when I thought I was unable to solve some issues and showing me that sometimes a solution is a lot simpler than I assumed! Thanks for helping me!
 * All the tutors at Code Institute I have spoken to throughout the development of this project! Thank you all for the advice!
 * To members from Slack when I was struggling to find solutions to issues or had general questions regarding the project. 
