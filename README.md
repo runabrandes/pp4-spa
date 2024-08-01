@@ -409,3 +409,43 @@ These commands were used for version control during development:
 - git commit --amend - to amend the most recent commit message
 
 #
+
+#### How to fork a repository:
+
+If you need to `FORK` a repository:
+
+1. Login in to [GitHub](www.github.com) and go to [https://github.com/runabrandes/pp4-spa](https://github.com/runabrandes/pp4-spa)
+2. In the top right corner, click `Fork`
+3. The next page will be the forked version of [https://github.com/runabrandes/pp4-spa](https://github.com/runabrandes/pp4-spa) but in your own repositories
+
+#
+
+#### How to clone a repository:
+
+If you need to make a clone of this repository:
+
+1. Fork the repository [https://github.com/runabrandes/pp4-spa](https://github.com/runabrandes/pp4-spa) using the steps above
+2. Above the file list, click `Code`
+3. Choose if you want to clone using HTTPS, SSH or GitHub CLI, then click the copy button
+4. Open Git Bash
+5. Change the directory to where you want your clone to go (in your own github)
+6. Type `git clone` and then paste the URL you copied in step 4
+7. Press `Enter` to create your clone
+
+#
+
+#### How to make a local clone:
+
+If you need to make a local clone:
+
+1. Login in to [GitHub](www.github.com) and go to [https://github.com/runabrandes/pp4-spa](https://github.com/runabrandes/pp4-spa)
+2. Under the repository name, above the list of files, click `Code`
+3. Here you will have two options, `Clone` or `Download` the repository
+4. You should close the repository using HTTPS, clicking on the icon to copy the link
+5. At this point, you can launch the `Gitpod workspace` or choose your own directory
+5. Open Git Bash
+6. Change the current working directory to the new location of where you want the cloned directory to be
+7. Type git clone and then paste the URL you copied in step 4
+8. Press Enter, to create your local clone to your chosen directory
+
+#
